@@ -1,0 +1,11 @@
+body {
+    background-color: #1F1C1C; /* Dark Grey */ 
+    color: white; /* White Text */ 
+    font-family: sans-serif; /* Sans-serif Font */ 
+    text-align: center; /* Centered Text */ 
+} ;
+h1 { 
+    color: #F0C5CE; /* Cyan */ 
+    font-family: sans-serif; /* Sans-serif Font */ 
+    font-size: 4.5em; /* Setting the font size equal to 4.5 times the height of*/
+};
