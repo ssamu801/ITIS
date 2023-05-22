@@ -35,7 +35,23 @@ if(mysqli_num_rows($result) === 1){
         $_SESSION['user_name'] = $row['user_name'];
         $_SESSION['name'] = $row['name'];
         $_SESSION['id'] = $row['id'];
-        header("Location: home.php");
+        $_SESSION['role'] = $row['role'];
+        if($row['role'] == "cashier")
+        {
+            header("Location: cashierhome.php");
+        }
+        elseif($row['role'] == "chef")
+        {
+            header("Location: chefhome.php");
+        }
+        elseif($row['role'] == "owner")
+        {
+            header("Location: ownerhome.php");
+        }
+        elseif($row['role'] == "invcontroller")
+        {
+            header("Location: invcontrollerhome.php");
+        }
         exit();
     }
     else{
