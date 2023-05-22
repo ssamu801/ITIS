@@ -1,11 +1,43 @@
 body {
-    background-color: #1F1C1C; /* Dark Grey */ 
+    background-color: #7f636e; /* Dark Grey */ 
     color: white; /* White Text */ 
     font-family: sans-serif; /* Sans-serif Font */ 
     text-align: center; /* Centered Text */ 
-} ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 h1 { 
-    color: #F0C5CE; /* Cyan */ 
     font-family: sans-serif; /* Sans-serif Font */ 
     font-size: 4.5em; /* Setting the font size equal to 4.5 times the height of*/
-};
+}
+
+.loginsubmitbutton{
+    border: none;
+    margin-top: 2vh;
+    padding: 16px 30px;
+    color:#55868C;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+.loginsubmitbutton:hover{
+box-shadow: 0 0 0 4px #55868C, 0 0 0 8px #28747e;
+}
+.logincard{
+    margin-top: 300px;
+    color: #55868C;
+    background: #CACAAA;
+    padding: 5vh 3vw 10vh 3vw;
+    width: fit-content;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.textfield{
+    display:grid;
+    gap: 1vh;
+    margin-top: 4vh;
+    text-align: start;
+    text-align: start;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: #55868C;
+}
