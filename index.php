@@ -12,7 +12,7 @@
 
         <div class="logincard">
             <form action="login.php" method="post">
-                <h1>Sign In</h1>
+            <h1>Restoran</h1>
 
                 <!-- Display the error (if any) -->
                 <?php if(isset($_GET['error'])) { ?>
@@ -21,12 +21,12 @@
 
                 <!-- Ask for username and pssword.... sign in -->
                 <div class="textfield">
-                <label> User Name </label>
-                <input type="text" name="username" placeholder="User Name"><br>
-                <label>Password </label>
+                <!--<label> User Name </label>-->
+                <input type="text" name="username" placeholder="Username"><br>
+                <!--<label>Password </label>-->
                 <input type="password" name="password" placeholder="Password"><br>
                 </div>
-                <button type="submit" class="loginsubmitbutton"> Sign In </button>
+                <button type="submit" class="loginsubmitbutton"> LOGIN </button>
         </div>
     </body>
 </html>
