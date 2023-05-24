@@ -9,19 +9,24 @@
         <link rel="stylesheet" href="style.css"> <!-- user style.css for decoration -->
     </head>
     <body>
-        <form action="login.php" method="post">
-            <h2>Sign In</h2>
 
-            <!-- Display the error (if any) -->
-            <?php if(isset($_GET['error'])) { ?>
-                <p class='error'> <?php echo $_GET['error']; ?></p>
-            <?php } ?>
+        <div class="logincard">
+            <form action="login.php" method="post">
+            <h1>Restoran</h1>
 
-            <!-- Ask for username and pssword.... sign in -->
-            <label> User Name </label>
-            <input type="text" name="username" placeholder="User Name"><br>
-            <label> Password </label>
-            <input type="password" name="password" placeholder="Password"><br>
-            <button type="submit"> Sign In </button>
+                <!-- Display the error (if any) -->
+                <?php if(isset($_GET['error'])) { ?>
+                    <p class='error'> <?php echo $_GET['error']; ?></p>
+                <?php } ?>
+
+                <!-- Ask for username and pssword.... sign in -->
+                <div class="textfield">
+                <!--<label> User Name </label>-->
+                <input type="text" name="username" placeholder="Username"><br>
+                <!--<label>Password </label>-->
+                <input type="password" name="password" placeholder="Password"><br>
+                </div>
+                <button type="submit" class="loginsubmitbutton"> LOGIN </button>
+        </div>
     </body>
 </html>
