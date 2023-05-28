@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="style.css"> <!-- user style.css for decoration -->
     </head>
     <body>
-
+        <div class="loginwrapper">
         <div class="logincard">
             <form action="login.php" method="post">
             <h1>Restoran</h1>
@@ -27,6 +27,7 @@
                 <input type="password" name="password" placeholder="Password"><br>
                 </div>
                 <button type="submit" class="loginsubmitbutton"> LOGIN </button>
+        </div>
         </div>
     </body>
 </html>
