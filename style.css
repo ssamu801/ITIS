@@ -1,9 +1,16 @@
 :root{
-    font-size:16px;
-    --text-primary: #b9b6b6;
+    font-size:1rem;
+    --text-primary: #EFEEF1;
     --text-secondary: #ececec;
-    --bg-primary: #24588f;
-    --bg-secondary: #3245b3;
+    --bg-primary: #222d4b;
+    --bg-secondary: #131827;
+    --btn-primary:#3d769b;
+    --btn-primary-hover:#5184a5;
+    --btn-info: #222d4b;
+    --btn-defaulted:#999999;
+    --btn-success:#489e67;
+    --btn-warning:#c58e2f;
+    --btn-danger:#f44336;
     --transition-speed: 600ms;
 }
 *{
@@ -22,7 +29,8 @@ body::-webkit-scrollbar-thumb{
     background: #6649b8;
 }
 body{
-    background-image: url("bgwaves.svg") ;
+    /*background-image: url("bgwaves.svg") ;*/
+    background: var(--bg-primary);
     margin: 0;
     padding: 0;
 } 
@@ -45,7 +53,8 @@ h1 {
 .loginsubmitbutton{
     border: none;
     margin-top: 5vh;
-    background: rgb(50,36,177);
+    /*background: rgb(50,36,177);*/
+    background: var(--btn-primary);
     background: linear-gradient(90deg, rgba(50,36,177,1) 0%, rgba(81,45,212,1) 50%, rgba(113,54,252,1) 100%);
     color:#ffff;
     border-radius: 26px;
@@ -58,7 +67,7 @@ h1 {
     font-size: 1rem;
 }
 .loginsubmitbutton:hover{
-box-shadow: 0 0 0 4px white, 0 0 0 8px gray;
+box-shadow: 0 0 0 4px #215c83, 0 0 0 8px var(--btn-primary);
 }
 .logincard{
     text-align: center; /* Centered Text */ 
@@ -68,17 +77,16 @@ box-shadow: 0 0 0 4px white, 0 0 0 8px gray;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 26px;
     border-width: 100px;
+    background:var(--bg-secondary);
     backdrop-filter: blur(10px);
     min-width: 220px;
+    align-items: center;
 }
 .textfield{
     display:grid;
     gap: 1.5vh;
     text-align: start;
-    padding-left: 2vw;
-    padding-right: 2vw;
     color: #55868C;
-    width: auto;
 }
 .textfield input{
     border-width: 0;
@@ -95,12 +103,12 @@ box-shadow: 0 0 0 4px white, 0 0 0 8px gray;
 main{
     margin-left: 5rem;
     padding: 1rem;
-    background: white;
 }
 /* End of Login Screen */
+
 /* Nav Bar */
 .navbar{/*Nav Bar Wrapper*/
-    background: var(--bg-secondary);
+    background: var(--btn-primary);
     position: fixed;
     transition: 200ms ease;
 }
@@ -128,7 +136,7 @@ main{
     transition: var(--transition-speed);
 }
 .nav-link:hover{ /* box hover */
-    background: #4d368c;
+    background: var(--btn-primary-hover);
     transition: 200ms ease;
     filter: grayscale(0) opacity(1);
 }
