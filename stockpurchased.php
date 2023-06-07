@@ -69,6 +69,22 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
                     <span class="link-text">View Stock</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="ownerhome.php" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier"> 
+                    <g id="User / User_02"> 
+                        <path id="Vector" d="M20 21C20 18.2386 16.4183 16 12 16C7.58172 16 4 18.2386 4 21M12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path> 
+                    </g>
+                </g>
+                </svg>
+                    <span class="link-text">Add Exmployee
+                    </span>
+                </a>
+            </li>
             <li class="nav-item"> <!-- Logout -->
                 <a href="logout.php" class="nav-link">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -81,9 +97,9 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
         </ul>
     </nav>
     <div class="stockpurchcard">
-    <h2>Manual Stock Count</h2>
-    <label>Ingredient: 
-        <input type="text" name="username" list="ingredients">
+        <h2>Input Stock Purchased</h2>
+        <label>Ingredient: 
+        <input type="text" name="username" list="ingredients" placeholder="Ingredient">
         <datalist id="ingredients">
         <option value="Meatballs">
         <option value="Spaghetti">
@@ -94,8 +110,11 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
         </datalist><br>
         </label>
         <label>Quantity: 
-        <input type="number" name="Quantity" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
-        </label></br>
+        <input type="number" name="Quantity" placeholder="Quantity" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+        </label>
+        <label>Expiry Date:
+        <input type="date" name="date"></br>
+        </label>
         <input type="Submit" name="stocksubmit"><br>
     </div>
     </body>
