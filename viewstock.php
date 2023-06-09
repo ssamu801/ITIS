@@ -9,7 +9,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
     
     <html>
     <head>
-        <title>Owner Page</title>
+        <title>Stock View Page</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>

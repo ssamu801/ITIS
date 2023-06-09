@@ -299,9 +299,7 @@ justify-self: center;
 }
 .stockpurchcard{
     margin: auto;
-    margin-top: 20vh;
     text-align: center; /* Centered Text */
-	padding: 5vh 3vw 10vh 3vw;
 	width:25vw;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	border-radius: 26px;
@@ -310,29 +308,14 @@ justify-self: center;
 	backdrop-filter: blur(10px);
 	min-width: 220px;
 }
-.stockpurchcard label {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    text-align: right;
-    width: 400px;
-    line-height: 26px;
-    margin-bottom: 10px;
-  }
-.stockpurchcard input{
-    color: black;
-    height: 20px;
-    flex: 0 0 200px;
-    margin-left: 10px;
-    
-}
+
 
 
 
 
 .stockview{
 	margin-top: 2vh;
-	margin-left: 5vw;
+	margin-left: 10vw;
 	margin-right: 5vw;
 }
 .stockview .content{
@@ -396,6 +379,25 @@ justify-self: center;
 	.restocklog{
 		width: calc(30vw);
 	}
+	.stockpurchcard{
+		margin-bottom: 20vh;
+		padding: 2.5vh 3vw 5vh 3vw;
+		margin-top: 3vh;
+	}
+	.stockpurchcard label {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		
+		margin-bottom: 1rem;
+	  }
+	  .stockpurchcard input{
+		color: black;
+		margin-top: 1rem;
+		flex: 0 0 4vh;
+	}
 }
 /*large screens*/
 @media only screen and (min-width: 601px){
@@ -420,5 +422,46 @@ justify-self: center;
 	}
 	.restocklog{
 		width: var(--big-card-size);
+	}
+	.stockpurchcard{
+		margin-top: 20vh;
+		padding: 5vh 3vw 8vh 3vw;
+	}
+	.stockpurchcard label {
+		display: table-cell;
+	}
+	.stockpurchcard .inputbutton{
+		color: black;
+		margin-top: 1vh;
+		width: auto;
+		padding: 1vh 1vw 1vh 1vw;
+		border: none;
+		background: linear-gradient(90deg, rgba(50,36,177,1) 0%, rgba(81,45,212,1) 50%, rgba(113,54,252,1) 100%);
+		color:#ffff;
+		border-radius: 26px;
+		transition: 0.2s;
+		height:3rem;
+		text-align: center;
+		font-weight: 600;
+		font-size: 0.8rem;
+	}
+	.stockpurchcard .inputbutton:hover{
+		box-shadow: 0 0 0 4px #215c83, 0 0 0 8px var(--btn-primary);
+	}
+	.stockpurchcard ul{
+		padding: 0;
+		margin: auto;
+		list-style-type: none;
+		display: table;
+		border-collapse:separate; 
+		border-spacing: 0 1rem;
+	}
+	.stockpurchcard li{
+		display: table-row;
+	}
+	.stockpurchcard .inputarea{
+		display: table-cell;
+		color:black;
+		width: 12vw;
 	}
 }

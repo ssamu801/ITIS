@@ -98,24 +98,29 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
     </nav>
     <div class="stockpurchcard">
         <h2>Input Stock Purchased</h2>
-        <label>Ingredient: 
-        <input type="text" name="username" list="ingredients" placeholder="Ingredient">
-        <datalist id="ingredients">
-        <option value="Meatballs">
-        <option value="Spaghetti">
-        <option value="Tomato Sauce">
-        <option value="Salt">
-        <option value="Pepper">
-        <option value="Orange">
-        </datalist><br>
-        </label>
-        <label>Quantity: 
-        <input type="number" name="Quantity" placeholder="Quantity" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
-        </label>
-        <label>Expiry Date:
-        <input type="date" name="date"></br>
-        </label>
-        <input type="Submit" name="stocksubmit"><br>
+        <ul>
+            <li>
+                <label>Ingredient:</label>
+                <input type="text" name="username" list="ingredients" class="inputarea">
+                <datalist id="ingredients">
+                <option value="Meatballs">
+                <option value="Spaghetti">
+                <option value="Tomato Sauce">
+                <option value="Salt">
+                <option value="Pepper">
+                <option value="Orange">
+                </datalist>
+            </li>
+            <li>
+            <label>Quantity: </label>
+            <input type="number" name="Quantity" class="inputarea" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+            </li>
+            <li>
+            <label>Expiry Date:</label>
+            <input type="date" name="date"  class="inputarea">
+            </li>
+        </ul>
+        <input type="Submit" name="stocksubmit"  class="inputbutton"><br>
     </div>
     </body>
     </html>
