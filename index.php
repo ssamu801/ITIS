@@ -26,8 +26,6 @@
                 <!--<label>Password </label>-->
                 <input type="password" name="password" placeholder="Password"><br>
                 </div>
-                <a href="#" class="forgot"> Forgot Password? </a>
-                <button type="submit" class="loginsubmitbutton"> LOGIN </button>
         </div>
         </div>
     </body>
