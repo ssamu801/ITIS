@@ -29,10 +29,10 @@
     <h2>Order Form</h2>
     <form method="post" action="process_order.php">
       <label for="vDish">Dish:</label>
-      <input type="text" id="vDish" name="vDish" required>
+      <input type="text" name="vDish[]" required>
       
       <label for="vQuantity">Quantity:</label>
-      <input type="number" id="vQuantity" name="vQuantity" required>
+      <input type="number" name="vQuantity[]" required>
     
       <input type="submit" value="Submit Order">
     </form>
