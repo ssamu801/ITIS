@@ -27,7 +27,6 @@ else if(empty($pass)){
 
 $sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
 $result = mysqli_query($conn,$sql);
-$var = mysqli_num_rows($result); 
 if(mysqli_num_rows($result) === 1){
     $row = mysqli_fetch_assoc($result);
     if($row['user_name'] === $uname && $row['password'] === $pass){
