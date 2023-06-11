@@ -9,6 +9,8 @@
 
     $conn = mysqli_connect($dbname,$dbuser,$dbpassword,$db_title);
 
+
     if(!$conn){
+        
         echo "Connection Failed";
     }
