@@ -9,35 +9,28 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
     
     <html>
     <head>
-        <title>Owner Page</title>
+        <title>Reports</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
     <body>
     <?php @include 'navbar.php' ?>
+    <div class="reportview">
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        Start Date: <input type="date" name="date1" value="<?php if(!isset($_POST['date1'])){ echo date('Y-m-d');} else{ echo $_POST['date1']; } ?>" required >
+        End Date: <input type="date" name="date2" value="<?php if(!isset($_POST['date2'])){ echo date('Y-m-d');} else{ echo $_POST['date2']; } ?>" required >
+        <input type="submit" value="Generate Report">
+    </form>
+    
+    <?php 
+        include 'report_backend.php';
+    ?>
 
-    <div class="stockpurchcard">
-        <h2>Manual Stock Count</h2>
-        <ul>
-            <li>
-                <label>Ingredient:</label>
-                <input type="text" name="username" list="ingredients" class="inputarea">
-                <datalist id="ingredients">
-                <option value="Meatballs">
-                <option value="Spaghetti">
-                <option value="Tomato Sauce">
-                <option value="Salt">
-                <option value="Pepper">
-                <option value="Orange">
-                </datalist>
-            </li>
-            <li>
-            <label>Quantity: </label>
-            <input type="number" name="Quantity" class="inputarea" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
-            </li>
-        </ul>
-        <input type="Submit" name="stocksubmit"  class="inputbutton" value="Submit Stock Count"><br>
+    <table border='1' width='25%'>
+    <table>
+
     </div>
+
     </body>
     </html>
 
