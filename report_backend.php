@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date1 = $_POST['date1'];
     $date2 = $_POST['date2'];
     date_default_timezone_set('Asia/Manila');
+    $timestamp = date("Y-m-d h:i:sa");
 
     $sql = "
         SELECT i.ingredientName, SUM(oi.quantity) AS stock_out,i.quantity AS ingredientQuantity
@@ -43,30 +44,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
 
         array_push($stock_in, $stocks);
-    }
+    }?>
     
-    echo "<h3>Stock Report</h3>";
-    echo "<h3>Report Created ".date("Y-m-d h:i:sa")."</h3>";
-    echo "<h3>Report for $date1 to $date2</h3>";
-    echo "<table border='1' width='25%'>";
-    echo "<th>Ingredient</th><th>Stock In</th><th>Stock Out</th><th>Quantity</th>";
+    <h3>Stock Report</h3>
+    <h3>Report Created <?php echo "$timestamp"; ?></h3>
+    <h3>Report for <?php echo "$date1";?> to <?php echo "$date2"; ?></h3>
+    <table class="reporttable">
+    <th>Ingredient</th>
+    <th>Stock In</th>
+    <th>Stock Out</th>
+    <th>Quantity</th>
 
+    <?php
     while($results = mysqli_fetch_array($records))
     {
         $ingredientName = $results['ingredientName'];
         $quantity = $results['ingredientQuantity'] - $results['stock_out'];
-
-        echo "<tr>
-                <td>$ingredientName</td>
+        ?>
+        <tr onclick="window.location.href='detrep.php?ingredientName=<?php echo $ingredientName; ?>';">
+                <td ><?php echo "$ingredientName"; ?></td>
                 <td>10</td>
-                <td>".$results['stock_out']."</td>
-                <td>$quantity</td>
-              </tr>";
-    }
-
+                <td><?php echo "$results[stock_out]"; ?></td>
+                <td><?php echo "$quantity"; ?></td>
+              </tr>
+    <?php } ?>
+<?php
     echo '</table>';
     echo "<h3>*END OF REPORT*</h3>";
 }
 
 mysqli_close($conn);
 ?>
+
+ 
