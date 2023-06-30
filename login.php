@@ -31,11 +31,11 @@ if(mysqli_num_rows($result) === 1){
     $row = mysqli_fetch_assoc($result);
     if($row['user_name'] === $uname && $row['password'] === $pass){
         echo "Logged In";
-        $_SESSION['user_name'] = $row['user_name'];
-        //$_SESSION['name'] = $row['name'];
+       $_SESSION['user_name'] = $row['user_name'];
+        $_SESSION['name'] = $row['name'];
         $_SESSION['id'] = $row['id'];
         $_SESSION['role'] = $row['role'];
-
+        
         if($row['role'] == "cashier")
         {
             header("Location: cashierhome.php");
@@ -56,7 +56,7 @@ if(mysqli_num_rows($result) === 1){
         
     }
     else{
-        header("Location: index.php?error=Incorrect User Name or Password");
+       header("Location: index.php?error=Incorrect User Name or Password");
     }
 }
 else{
