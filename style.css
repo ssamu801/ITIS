@@ -373,6 +373,53 @@ justify-self: center;
 	color: #131827;
 }
 
+.roleview{
+	margin-top: 2vh;
+	margin-left: 10vw;
+	margin-right: 5vw;
+}
+
+.roleview .content{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.roleview .content table{
+	border: 2px solid #cecfd5;
+	border-spacing: 0;
+	width: 100%;
+}
+.roleview .content th{
+	padding: 10px 15px;
+	border: 1px solid #cecfd5;
+	background: var(--btn-info);
+	color: #fff;
+}
+.roleview .content td{
+	border-bottom: 1px solid #cecfd5;
+	border-right: 1px solid #cecfd5;
+	padding: 10px 15px;
+	text-align: center;
+}
+.roleview .content tbody tr:nth-child(even) {
+	background: #555558;
+}
+.roleview .content tbody tr:nth-child(even):hover {
+	background-color: var(--btn-primary-hover);
+}
+.roleview .content tr:hover{
+	background-color: var(--btn-primary-hover);
+}
+
+.roleview input{
+	color:#131827;
+}
+.roleview button{
+	color: #131827;
+}
+.roleview select{
+	color: #131827;
+}
 
 
 
