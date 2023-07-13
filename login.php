@@ -46,11 +46,11 @@ if(mysqli_num_rows($result) === 1){
         }
         elseif($row['role'] == "owner")
         {
-            header("Location: ownerhome.php");
+            header("Location: Owner/ownerhome.php");
         }
         elseif($row['role'] == "invcontroller")
         {
-            header("Location: invcontrollerhome.php");
+            header("Location: ./StockController/invcontrollerhome.php");
         }
         exit();
         
