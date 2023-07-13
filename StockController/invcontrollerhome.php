@@ -14,7 +14,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    <?php @include 'navbar.php' ?>
+    <?php @include '../navbar.php' ?>
     <main>
                 <div class="notifications">
                     <h2>Notifications</h2>
