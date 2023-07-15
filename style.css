@@ -471,6 +471,22 @@ justify-self: center;
 .roleview select{
 	color: #131827;
 }
+.reportview .detailedspecs{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.reportview .detailedspecs img{
+	height: 300px;
+	width: 400px;
+}
+
+.reportview .detailedtext{
+	text-align: start;
+	margin-left: 2vw;
+}
+
 
 
 
