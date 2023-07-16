@@ -16,6 +16,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
     <body>
     <?php @include '../navbar.php' ?>
     <div class="reportview">
+    <h1>Inventory/Stock Report</h1>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         Start Date: <input class="txdate" type="date"  name="date1" value="<?php if(!isset($_POST['date1'])){ echo date('Y-m-d');} else{ echo $_POST['date1']; } ?>" required >
         End Date: <input class="txdate" type="date" name="date2" value="<?php if(!isset($_POST['date2'])){ echo date('Y-m-d');} else{ echo $_POST['date2']; } ?>" required >

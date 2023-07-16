@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] == "invcontroller")
+{
+    ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +13,7 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<?php @include 'navbar.php' ?>
+<?php @include '../navbar.php' ?>
 <div class="stockpurchcard">
     <h2>Input Stock Purchased</h2>
     <form action="addIngredient.php" method="POST">
@@ -41,3 +48,11 @@
 </div>
 </body>
 </html>
+<?php
+}
+
+else{
+    header("Location: index.php");
+    exit();
+}
+?>

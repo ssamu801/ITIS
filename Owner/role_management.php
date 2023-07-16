@@ -19,7 +19,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
     <?php
 	
     $DBConnect = mysqli_connect("localhost", "root", "") or die ("Unable to Connect". mysqli_error($DBConnect));
-    mysqli_select_db($DBConnect, 'sampledb');
+    mysqli_select_db($DBConnect, 'itisdev');
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // collect value of input field	

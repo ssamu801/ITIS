@@ -74,7 +74,6 @@
 			}
 			?>
 			<div class="reportlabels">
-			<h3>Stock Report</h3>
     		<h3>Report Created <?php echo "$timestamp"; ?></h3>
     		<h3>Report for <?php echo "$date1";?> to <?php echo "$date2"; ?></h3>
 			</div>
