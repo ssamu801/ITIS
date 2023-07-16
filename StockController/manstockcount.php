@@ -1,16 +1,20 @@
+<?php
+session_start();
 
+if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] == "invcontroller")
+{
+    ?>
 
     <!DOCTYPE html>
     
     <html>
     <head>
         <title>Owner Page</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    <?php @include 'navbar.php' ?>
-
+    <?php @include '../navbar.php' ?>
     <div class="stockpurchcard">
         <h2>Manual Stock Count</h2>
         <ul>
@@ -35,3 +39,11 @@
     </div>
     </body>
     </html>
+    <?php
+}
+
+else{
+    header("Location: index.php");
+    exit();
+}
+?>
