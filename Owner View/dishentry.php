@@ -13,6 +13,8 @@
         <?php 
             @include "connect.php";
             $nDishID = $_POST['nDishID'];
+
+            if(isset($_POST['approve'])) {
             $selectDishQuery = mysqli_query($DBConnect, "   SELECT nDishID, dishName, dateCreated, approved, img 
                                                             FROM pending_dish
                                                             WHERE nDishID = '$nDishID'");
@@ -40,6 +42,14 @@
             while ($pendingRecipe = mysqli_fetch_array($selectRecipeQuery)) echo "<li>" . $pendingRecipe['ingredientName'] . "</li>";
         ?>
     </ul>
-</div>
+    </div>
+    <?php
+        }
+        if(isset($_POST['deny'])) {
+            mysqli_query($DBConnect, "UPDATE pending_dish SET approved = 'No' WHERE nDishID = $nDishID;");
+            echo '<script>window.location.href = "approvedish.php";</script>';
+        }
+    ?>
+
 </body>
 </html>
