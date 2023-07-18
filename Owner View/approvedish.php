@@ -32,10 +32,7 @@
                         <form method="POST" action="dishentry.php">
                             <input type="hidden" name="nDishID" value="<?= $pendingDish['nDishID']; ?>" />
                             <button type="submit" style="color:black">Approve</button>
-                        </form>
-                        <form method="POST" action="dishdeny.php">
-                            <input type="hidden" name="nDishID" value="<?= $pendingDish['nDishID']; ?>" />
-                            <button type="submit" style="color:black">Deny</button>
+                            <button type="submit" name="deny" value="deny" style="color:black">Deny</button>
                         </form>
                     </td>
                 </tr>
