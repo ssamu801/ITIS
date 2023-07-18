@@ -26,7 +26,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
             <tbody>
             <?php 
             $DBConnect = mysqli_connect("localhost", "root", "") or die ("Unable to Connect". mysqli_error());
-            $db = mysqli_select_db($DBConnect, 'itisdev_db');
+            $db = mysqli_select_db($DBConnect, 'itisdev');
                 $query = mysqli_query($DBConnect, "SELECT i.ingredientName, i.quantity, u.unitName FROM ingredient i JOIN unit u ON i.unitID=u.unitID");
                 while($retrieve = mysqli_fetch_array($query)) {
             ?>

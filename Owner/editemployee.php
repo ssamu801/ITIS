@@ -8,16 +8,16 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
 <html>
     <head>
         <title>Employee Details</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../style.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
     <body>
-	<?php @include 'navbar.php' ?>
+	<?php @include '../navbar.php' ?>
 
 	<?php
 	
 	$DBConnect = mysqli_connect("localhost", "root", "") or die ("Unable to Connect". mysqli_error($DBConnect));
-    mysqli_select_db($DBConnect, 'sampledb');
+    mysqli_select_db($DBConnect, 'itisdev');
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	  $empid = $_POST['employee_id'];

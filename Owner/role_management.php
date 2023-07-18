@@ -10,11 +10,11 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
     <html>
     <head>
         <title>Employee Roles</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    <?php @include 'navbar.php' ?>
+    <?php @include '../navbar.php' ?>
 
     <?php
 	

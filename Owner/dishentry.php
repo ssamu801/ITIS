@@ -17,17 +17,18 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
     <?php @include '../navbar.php' ?>
     <div class="reportview">
         <h2> Enter Dish Details </h2>
-       <div style="width: 50%">
+        <div class="detailedspecs">
         <!-- dish image -->
-        <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="food img" style="width:100%; border-radius:10px">
+        <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="food img"">
        <!-- dish form here  -->
-       <form action="">
+       </div>
+       <form class="priceform" action="">
             <div>
-            <input type="number"  min="0" name="" id="" placeholder="Enter Price" style>
-            <button><a href="#" style="color:black">Submit</a></button>
+            <input type="number"  class="price" min="0" name="" id="" placeholder="Enter Price" style>
+            <button><a href="#">Submit</a></button>
             </div>
         </form>
-       </div>
+       
        <!-- ingridient list  -->
        <h3>Ingridients</h3>
        <ul>

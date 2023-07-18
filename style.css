@@ -367,11 +367,13 @@ justify-self: center;
 
 .reportview form{
 	border-bottom: #131827;
-
 	border-radius: 26px;
 	background-color: var(--btn-primary);
 	padding: 1vh 1vw 1vh 1vw;
+}
 
+.reportview .price{
+	color:black;
 }
 
 .txdate{
@@ -486,7 +488,33 @@ justify-self: center;
 	text-align: start;
 	margin-left: 2vw;
 }
-
+.reportview .priceform{
+	background-color: var(--btn-info);
+	
+}
+.reportview .priceform input{
+	color: black;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border-radius: 26px;
+	
+}
+.reportview .priceform button{
+	color: black;
+	margin-top: 1vh;
+	width: auto;
+	padding: 1vh 1vw 1vh 1vw;
+	border: none;
+	background: linear-gradient(90deg, rgba(50,36,177,1) 0%, rgba(81,45,212,1) 50%, rgba(113,54,252,1) 100%);
+	color:#ffff;
+	border-radius: 26px;
+	transition: 0.2s;
+	height:3rem;
+	text-align: center;
+	font-weight: 600;
+	font-size: 0.8rem;
+}
 
 
 
