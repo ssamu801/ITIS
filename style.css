@@ -465,12 +465,27 @@ justify-self: center;
 .roleview input{
 	color:#131827;
 }
+.roleview .names{
+	padding: 0; 
+	border: none; 
+	background: none; 
+	color: white;
+	font-family: sans-serif;
+}
+.roleview .backb{
+	text-align: right;
+	margin-top: -25px;
+}
 .roleview button{
 	color: #131827;
 }
 .roleview select{
 	color: #131827;
 }
+.roleview option{
+	color: #131827;
+}
+
 .reportview .detailedspecs{
 	display: flex;
 	flex-direction: column;

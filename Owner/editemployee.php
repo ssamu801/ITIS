@@ -8,7 +8,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
 <html>
     <head>
         <title>Employee Details</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="../style.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -17,31 +17,33 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
 	<?php
 	
 	$DBConnect = mysqli_connect("localhost", "root", "") or die ("Unable to Connect". mysqli_error($DBConnect));
-    mysqli_select_db($DBConnect, 'sampledb');
+    mysqli_select_db($DBConnect, 'itisdev');
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	  $empid = $_POST['employee_id'];
+	  $empid = $_POST['employeeID'];
 	  
 			$sql = "
-			SELECT employee_id, first_name, last_name, role
-			FROM   employees 
-			WHERE  employee_id = $empid;";
+			SELECT employeeID, firstName, lastName, role
+			FROM   user 
+			WHERE  employeeID = $empid;";
 			$records = mysqli_query($DBConnect, $sql) or die(mysqli_error($DBConnect));
 			
 			while($wow = mysqli_fetch_array($records))
 			{
-			$EMPLOYEE_ID = $wow['employee_id'];
-			$FIRST_NAME = $wow['first_name'];
-			$LAST_NAME = $wow['last_name'];
-			$ROLE = $wow['role'];
+				$EMPLOYEE_ID = $wow['employeeID'];
+				$FIRST_NAME = $wow['firstName'];
+				$LAST_NAME = $wow['lastName'];
+				$ROLE = $wow['role'];
 			}
 	?>		
 		<div class="roleview">
-			<h1>Edit Role</h1>
+			<h1>Edit Role <div class="backb">
+				<a href="role_management.php" class="sbt_btn">Back</a>
+			</div></h1>
 		<div class="content">
 		<table border='1' width='25%'>
 			<form action='role_management.php' method='post'>
-				 <input type='hidden' name='employeeid' value='<?= $EMPLOYEE_ID ?>'>
+				 <input type='hidden' name='employeeID' value='<?= $EMPLOYEE_ID ?>'>
 					<tr>
 						<td> EMPLOYEE ID: </td> <td><?= $EMPLOYEE_ID ?></td>
 					</tr>
@@ -55,9 +57,9 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
 					<td> ROLE:      </td>
 					<td>
 						<select id='rolechoice' name='rolechoice'>
-							<option value='Owner'    <?php if($ROLE == 'Owner'){echo"selected";}      echo"> Owner </option>"; ?>
-							<option value='Chef'     <?php if($ROLE == 'Chef'){ echo"selected";}      echo">Chef </option>";  ?>
-							<option value='Cashier'  <?php if($ROLE == 'Cashier'){echo"selected";}    echo">Cashier </option>"; ?>
+							<option value='Owner'    <?php if($ROLE == 'owner'){echo"selected";}      echo"> Owner </option>"; ?>
+							<option value='Chef'     <?php if($ROLE == 'chef'){ echo"selected";}      echo">Chef </option>";  ?>
+							<option value='Cashier'  <?php if($ROLE == 'cashier'){echo"selected";}    echo">Cashier </option>"; ?>
 					
 						</select>
 						<input type='submit' value='Update'>
