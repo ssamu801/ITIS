@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php @include 'navbar.php' ?>
-    <div class="reportview">
+    <div class="approvedishcss">
         <h2> Dishes to Approve </h2>
         <table class="reporttable">
             <th>Dish</th>
@@ -25,14 +25,14 @@
                     <td>
                         <form action="dishdetailed.php" method="POST">
                             <input type="hidden" name="nDishID" value="<?= $pendingDish['nDishID']; ?>" />
-                            <button type="submit" style="color:black"><?= $pendingDish['dishName']; ?></button>
+                            <button type="submit" class="ingredname"><?= $pendingDish['dishName']; ?></button>
                         </form>
                     </td>
                     <td>
                         <form method="POST" action="dishentry.php">
-                            <input type="hidden" name="nDishID" value="<?= $pendingDish['nDishID']; ?>" />
-                            <button type="submit" style="color:black">Approve</button>
-                            <button type="submit" name="deny" value="deny" style="color:black">Deny</button>
+                            <input type="hidden" name="nDishID" value="<?= $pendingDish['nDishID']; ?>"/>
+                            <button type="submit" class="approve">Approve</button>
+                            <button type="submit" name="deny" value="deny" class="deny">Deny</button>
                         </form>
                     </td>
                 </tr>

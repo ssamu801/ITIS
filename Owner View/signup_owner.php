@@ -7,10 +7,11 @@
     </head>
     <body>
     <?php @include 'navbar.php' ?>
-    <div class ="reportview">
+    <div class ="signupview">
 		<div id="title">
 			<h2>Create User</h2>
 		</div>
+        <div class="card"
         <form action="process_sign_up.php" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br><br>
@@ -23,7 +24,7 @@
 
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required><br><br>
-
+ 
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" required><br><br>
                    
@@ -38,6 +39,7 @@
             <br>  
         </form>
     </div>
+</div>
     </body>
 </html>
 <?php

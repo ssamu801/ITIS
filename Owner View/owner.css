@@ -368,7 +368,7 @@ justify-self: center;
 .reportview form{
 	border-bottom: #131827;
 	border-radius: 26px;
-	background-color: var(--btn-primary);
+	
 	padding: 1vh 1vw 1vh 1vw;
 }
 
@@ -515,6 +515,138 @@ justify-self: center;
 	font-weight: 600;
 	font-size: 0.8rem;
 }
+
+
+.approvedishcss{
+	margin: 5vh 3vw 10vh 10vw;
+	padding: 2vh;
+	width:85%;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	border-radius: 26px;
+	border-width: 100px;
+	background:var(--btn-info);
+	backdrop-filter: blur(10px);
+	min-width: 220px;
+	height: 100vh;
+	
+}
+
+.approvedishcss form{
+	border-bottom: #131827;
+	border-radius: 26px;
+	
+	padding: 1vh 1vw 1vh 1vw;
+}
+
+.approvedishcss .approve{
+	border: none;
+	margin-top: 2vh;
+	/*background: rgb(50,36,177);
+	*/
+	background: rgb(50,255,0);
+	background: linear-gradient(90deg, rgba(50,255,0,1) 0%, rgba(43,221,0,1) 30%, rgba(41,208,0,1) 48%, rgba(44,227,0,1) 70%, rgba(20,255,0,1) 100%); 
+	color:#ffff;
+	border-radius: 26px;
+	transition: 0.2s;
+	width: 20%;
+	height:4em;
+	text-align: center;
+	font-size: medium;
+	font-weight:600;
+	font-size: 1rem;
+}
+
+.approvedishcss .deny{
+	border: none;
+	margin-top: 2vh;
+	/*background: rgb(50,36,177);
+	*/
+	background: rgb(251,0,0);
+	background: linear-gradient(90deg, rgba(251,0,0,1) 0%, rgba(196,27,27,1) 30%, rgba(156,46,46,1) 48%, rgba(156,46,46,1) 70%, rgba(255,0,0,1) 100%); 
+	color:#ffff;
+	border-radius: 26px;
+	transition: 0.2s;
+	width: 20%;
+	height:4em;
+	text-align: center;
+	font-size: medium;
+	font-weight:600;
+	font-size: 1rem;
+}
+
+.approvedishcss .ingredname{
+	border: none;
+	margin-top: 2vh;
+	background: transparent;	
+	color:#ffff;
+	border-radius: 26px;
+	transition: 0.2s;
+	width: 90%;
+	height:4em;
+	text-align: center;
+	font-size: medium;
+	font-weight:600;
+	font-size: 1rem;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+}
+
+.card form {
+     display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 120px auto; /* Adjust the width of the first column as needed */
+    align-items: center;
+
+}
+
+.card label {
+    font-weight: bold;
+}
+
+.card input[type="text"],
+input[type="password"],
+select {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 120px auto; /* Adjust the width of the first column as needed */
+    align-items: center;
+	color:#333;
+}
+
+.card .inputbutton {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card .inputbutton:hover {
+    background-color: #0056b3;
+}
+.signupview{
+	margin: 5vh 3vw 10vh 10vw;
+	padding: 2vh;
+	width:85%;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	border-radius: 26px;
+	border-width: 100px;
+	background:var(--btn-info);
+	backdrop-filter: blur(10px);
+	min-width: 220px;
+	height: 100vh;	
+}
+
+
+
+
+
 
 
 
