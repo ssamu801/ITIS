@@ -1,6 +1,5 @@
     <?php
-        $conn = mysqli_connect("localhost", "root", "") or die ("Unable to Connect". mysqli_error($conn));
-        mysqli_select_db($conn, 'itisdev');
+		include "connect.php";
 
 	
 	if (@$_GET['date1'] != null && @$_GET['date2']!=null)  {
@@ -19,7 +18,7 @@
 
 				WHERE 	 DATE(o.createdAt) >= '$date1' 
 				AND 	 DATE(o.createdAt) <= '$date2'
-				AND		 d.status='Active'
+				AND		 d.Active ='Yes'
 				GROUP BY i.ingredientID
 				ORDER BY i.ingredientName;";
 
@@ -49,10 +48,10 @@
 			    		AND 		DATE(d.createdAt) 	<= '$date2' 
 						ORDER BY 	i.ingredientName;";		
 
-			$records = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-			$stockResult = mysqli_query($conn, $sql2) or die(mysqli_error($conn));
-			$expiredResult = mysqli_query($conn, $sql3) or die(mysqli_error($conn));
-			$disparityResult = mysqli_query($conn, $sql4) or die(mysqli_error($conn));
+			$records = mysqli_query($DBConnect, $sql) or die(mysqli_error($DBConnect));
+			$stockResult = mysqli_query($DBConnect, $sql2) or die(mysqli_error($DBConnect));
+			$expiredResult = mysqli_query($DBConnect, $sql3) or die(mysqli_error($DBConnect));
+			$disparityResult = mysqli_query($DBConnect, $sql4) or die(mysqli_error($DBConnect));
 
 			$stock_in = [];
 			while($stockResults = mysqli_fetch_array($stockResult))
@@ -239,7 +238,7 @@
 	
 						WHERE 	 DATE(o.createdAt) >= '$date1' 
 						AND 	 DATE(o.createdAt) <= '$date2'
-						AND		 d.status='Active'
+						AND		 d.Active ='Yes'
 						GROUP BY i.ingredientID
 						ORDER BY i.ingredientName;";
 		
@@ -271,10 +270,10 @@
 			    		AND 		DATE(d.createdAt) 	<= '$date2' 
 						ORDER BY 	i.ingredientName;";	
 		
-					$records = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-					$stockResult = mysqli_query($conn, $sql2) or die(mysqli_error($conn));
-					$expiredResult = mysqli_query($conn, $sql3) or die(mysqli_error($conn));
-					$disparityResult = mysqli_query($conn, $sql4) or die(mysqli_error($conn));
+					$records = mysqli_query($DBConnect, $sql) or die(mysqli_error($DBConnect));
+					$stockResult = mysqli_query($DBConnect, $sql2) or die(mysqli_error($DBConnect));
+					$expiredResult = mysqli_query($DBConnect, $sql3) or die(mysqli_error($DBConnect));
+					$disparityResult = mysqli_query($DBConnect, $sql4) or die(mysqli_error($DBConnect));
 		
 					$stock_in = [];
 					while($stockResults = mysqli_fetch_array($stockResult))
@@ -448,7 +447,7 @@
 					<?php
 	} 
 
-		mysqli_close($conn);
+		mysqli_close($DBConnect);
 		?>
     </body>
 </html>

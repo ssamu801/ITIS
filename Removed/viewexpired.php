@@ -1,39 +1,36 @@
-<?php
-session_start();
-
-if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] == "invcontroller")
-{
-    ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stock View</title>
+    <title>View Expired</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<?php @include '../navbar.php' ?>
+<?php @include 'navbar.php' ?>
 <div class="stockview">
-<h1>Stock View</h1>
+<h1>Expired Audit Table</h1>
     <div class="content">
         <table>
             <tr>
                 <th scope="col">Ingredient</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Measurement</th>
+                <th scope="col">Expired Date</th>
+                <th scope="col">Updated By</th>
             </tr>
             <tbody>
             <?php 
-            $DBConnect = mysqli_connect("localhost", "root", "") or die ("Unable to Connect". mysqli_error());
-            $db = mysqli_select_db($DBConnect, 'itisdev');
-                $query = mysqli_query($DBConnect, "SELECT i.ingredientName, i.quantity, u.unitName FROM ingredient i JOIN unit u ON i.unitID=u.unitID");
+                @include 'connect.php';
+
+                $query = mysqli_query($DBConnect, "SELECT i.ingredientName, e.quantity, u.unitName, e.expiredDate, e.updatedBy FROM expired e JOIN ingredient i ON e.ingredientID = i.ingredientID JOIN unit u ON u.unitID = i.unitID ORDER BY e.expiredDate DESC;");
                 while($retrieve = mysqli_fetch_array($query)) {
             ?>
             <tr>
-                <td> <?= $retrieve['ingredientName']?></td>
+                <td><?= $retrieve['ingredientName']?></td>
                 <td><?= $retrieve['quantity']?></td>
                 <td><?= $retrieve['unitName']?></td>
+                <td><?= $retrieve['expiredDate']?></td>
+                <td><?= $retrieve['updatedBy']?></td>
             </tr>
             <?php 
                 }
@@ -44,12 +41,3 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
 </div>
 </body>
 </html>
-
-<?php
-}
-
-else{
-    header("Location: index.php");
-    exit();
-}
-?>

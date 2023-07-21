@@ -1,30 +1,29 @@
 <?php
 session_start();
 
-if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] == "invcontroller")
+if(isset($_SESSION['id']) && isset($_SESSION['username']) && $_SESSION['role'] == "Inventory")
 {
     ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stock Purchased Page</title>
+    <title>Expired Stock</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<?php @include '../navbar.php' ?>
+<?php @include 'navbar.php' ?>
 <div class="stockpurchcard">
-    <h2>Input Stock Purchased</h2>
-    <form action="addIngredient.php" method="POST">
+    <h2>Input Expired Stock</h2>
+    <form action="expiredIngredient.php" method="POST">
         <ul>
             <li>
                 <label>Ingredient:</label>
                 <input type="text" name="ingredientName" class="inputarea" placeholder="Input Ingredient">
             </li>
             <li>
-                <label>Quantity:</label>
-                <input type="text" name="qty" class="inputarea">
+                <label>Quantity: </label>
+                <input type="number" name="qty" class="inputarea" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
             </li>
             <li>
                 <label>Unit:</label>
@@ -42,8 +41,12 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
                     ?>
                 </select>
             </li>
+            <li>
+                <label>Multiplier:</label>
+                <input type="number" name="multiplier" class="inputarea" value="1" required />
+            </li>
         </ul>
-        <input type="Submit" name="stocksubmit"  class="inputbutton" value="Submit Restock"><br>
+        <input type="Submit" name="stocksubmit"  class="inputbutton" value="Submit Expired"><br>
     </form>
 </div>
 </body>
@@ -52,7 +55,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
 }
 
 else{
-    header("Location: index.php");
+    header("Location: ../logout.php");
     exit();
 }
 ?>

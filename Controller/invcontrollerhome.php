@@ -1,16 +1,15 @@
 <?php
 session_start();
 
-if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] == "invcontroller")
+if(isset($_SESSION['id']) && isset($_SESSION['username']) && $_SESSION['role'] == "Inventory")
 {
     ?>
-
     <!DOCTYPE html>
     
     <html>
     <head>
         <title>Inventory Controller Page</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -71,7 +70,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
 }
 
 else{
-    header("Location: index.php");
+    header("Location: ../logout.php");
     exit();
 }
 ?>
