@@ -1,15 +1,14 @@
 <?php
 session_start();
 
-if(isset($_SESSION['id']) && isset($_SESSION['username']) && $_SESSION['role'] == "Owner")
+if(isset($_SESSION['id']) && isset($_SESSION['username']) && $_SESSION['role'] == "Inventory")
 {
     ?>
-
     <!DOCTYPE html>
     
     <html>
     <head>
-        <title>Owner Page</title>
+        <title>Inventory Controller Page</title>
         <link rel="stylesheet" type="text/css" href="../style.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
@@ -36,10 +35,6 @@ if(isset($_SESSION['id']) && isset($_SESSION['username']) && $_SESSION['role'] =
                         <li>Tomato Sauce Out of Stock</li>
                         <li>Tomato Sauce Out of Stock</li>
                     </ul>
-                </div>
-                <div class="msales">
-                <h2> Monthly Sales </h2>
-                <h3>39,700</h3>
                 </div>
             <div class="restocklog">
             <h2> Restock Logs </h2>

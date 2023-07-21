@@ -515,7 +515,379 @@ justify-self: center;
 	font-weight: 600;
 	font-size: 0.8rem;
 }
+.approvedishcss{
+	margin: 5vh 3vw 10vh 10vw;
+	padding: 2vh;
+	width:85%;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	border-radius: 26px;
+	border-width: 100px;
+	background:var(--btn-info);
+	backdrop-filter: blur(10px);
+	min-width: 220px;
+	height: 100vh;
+	
+}
 
+.approvedishcss form{
+	border-bottom: #131827;
+	border-radius: 26px;
+	
+	padding: 1vh 1vw 1vh 1vw;
+}
+
+.approvedishcss .approve{
+	border: none;
+	/* margin-top: 2vh; */
+	/*background: rgb(50,36,177);
+	*/
+	background: rgb(50,255,0);
+	background: linear-gradient(90deg, rgba(50,255,0,1) 0%, rgba(43,221,0,1) 30%, rgba(41,208,0,1) 48%, rgba(44,227,0,1) 70%, rgba(20,255,0,1) 100%); 
+	color:#ffff;
+	border-radius: 26px;
+	transition: 0.2s;
+	width: 20%;
+	height:2.5em;
+	text-align: center;
+	font-size: medium;
+	font-weight:600;
+	font-size: 1rem;
+}
+
+.approvedishcss .deny{
+	border: none;
+	/* margin-top: 2vh; */
+	/*background: rgb(50,36,177);
+	*/
+	background: rgb(251,0,0);
+	background: linear-gradient(90deg, rgba(251,0,0,1) 0%, rgba(196,27,27,1) 30%, rgba(156,46,46,1) 48%, rgba(156,46,46,1) 70%, rgba(255,0,0,1) 100%); 
+	color:#ffff;
+	border-radius: 26px;
+	transition: 0.2s;
+	width: 20%;
+	height:2.5em;
+	text-align: center;
+	font-size: medium;
+	font-weight:600;
+	font-size: 1rem;
+}
+
+.approvedishcss .ingredname{
+	border: none;
+	/* margin-top: 2vh; */
+	background: transparent;	
+	color:#ffff;
+	border-radius: 26px;
+	transition: 0.2s;
+	width: 90%;
+	/* height:4em; */
+	text-align: center;
+	font-size: medium;
+	font-weight:600;
+	font-size: 1.5rem;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+}
+
+.card form {
+     display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 120px auto; /* Adjust the width of the first column as needed */
+    align-items: center;
+
+}
+
+.card label {
+    font-weight: bold;
+}
+
+.card input[type="text"],
+input[type="password"],
+select {
+    /* display: grid; */
+    grid-gap: 10px;
+    grid-template-columns: 120px auto; /* Adjust the width of the first column as needed */
+    align-items: center;
+	color:#333;
+}
+
+.card .inputbutton {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card .inputbutton:hover {
+    background-color: #0056b3;
+}
+.signupview{
+	width: 540px;
+	margin: 40px auto;
+	margin-top: 15vh;
+	padding: 20px;
+	border-radius: 15px;
+	background:var(--btn-info);
+	box-shadow: 0px 10px 40px 0px rgba(47,47,47,.1);
+}
+
+.signupview #title{
+	text-align: center;
+}
+
+.signupview label{
+	display: inline-block;
+}
+
+.signupview input[type ="password"]{
+  padding: 6px;
+  margin: 10px auto;
+  position: sticky;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  color: black;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+.signupview #password{
+	width: 80%;
+	margin-left: 4px;
+}
+
+.signupview #confirmpassword{
+	width: 70%;
+}
+
+.signupview input[type="text"]{
+  padding: 6px;
+  margin: 10px auto;
+  width: 80%;
+  position: sticky;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  color: black;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+.signupview input[type="number"]{
+  padding: 6px;
+  margin: 10px auto;
+  position: sticky;
+  width: 10%;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  color: black;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+.signupview #role {
+  padding: 6px;
+  margin: 10px auto;
+  position: sticky;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  color: black;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  z-index: 10;
+  color:black;
+  margin-left: 2px;
+}
+
+.signupview input[type="Submit"]{
+  margin: 10px auto;
+  display: block;
+  width: 40%;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #000000
+}
+
+.signupview input[type="Submit"]:hover{
+  background: #2691d9;
+  color: #e9f4fb;
+  transition: .5s;
+}
+
+.chefview{
+	width: 540px;
+	margin: 40px auto;
+	margin-top: 15vh;
+	padding: 20px;
+	border-radius: 15px;
+	background:var(--btn-info);
+	box-shadow: 0px 10px 40px 0px rgba(47,47,47,.1);
+}
+
+.chefview #title{
+	text-align: center;
+}
+
+.chefview label{
+	display: inline-block;
+}
+
+.chefview input[type="text"]{
+  padding: 6px;
+  margin: 10px auto;
+  position: sticky;
+  width: 20%;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  color: black;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+.chefview input[type="number"]{
+  padding: 6px;
+  margin: 10px auto;
+  position: sticky;
+  width: 10%;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  color: black;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+.chefview #recipename{
+	padding: 6px;
+	width: 50%;
+}
+
+.chefview #quantity{
+	width: 10%;
+}
+
+.chefview #addbutton{
+  border: none;
+  background-color: inherit;
+  color: dodgerblue;
+  padding: 8px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.chefview input[type="Submit"]{
+  margin: 10px auto;
+  display: block;
+  width: 40%;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #000000
+}
+.chefview input[type="Submit"]:hover{
+  background: #2691d9;
+  color: #e9f4fb;
+  transition: .5s;
+}
+
+.chefview .remove {
+  background: none!important;
+  font-size: 28px;
+  border: none;
+  padding-top: 1;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  cursor: pointer;
+}
+
+.contain{
+    padding: 0 10px;
+}
+
+.col-md-9{
+    background-image: url("bgwaves.svg");
+}
+
+.menu , .cart{
+    height: 85vh;
+}
+
+.menu{
+    overflow-y: scroll;
+}
+
+.sub-nav{
+    padding: 10px;
+    border: 0;
+}
+
+.type-buy{
+    width: 100%;
+}
+
+.custom-bg {
+    background-color: #FF0000;
+}
+
+.item-list{
+    position: relative;
+    height: 57vh;
+    padding-right: 2%;
+    overflow-y: scroll;
+}
+
+.quantity{
+    width: 15%;
+}
+
+.card{
+    cursor: pointer;
+}
+
+#buy-type{
+    color: black;
+    border-radius: 0;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 38%;
+}
+
+.remove-all{
+    width: 100%;
+    border-radius: 0;
+}
+
+.transparent-button {
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
 
 
 

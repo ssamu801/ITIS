@@ -25,32 +25,32 @@ else if(empty($pass)){
     exit();
 }
 
-$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+$sql = "SELECT * FROM user WHERE username='$uname' AND password='$pass'";
 $result = mysqli_query($conn,$sql);
 if(mysqli_num_rows($result) === 1){
     $row = mysqli_fetch_assoc($result);
-    if($row['user_name'] === $uname && $row['password'] === $pass){
+    if($row['username'] === $uname && $row['password'] === $pass){
         echo "Logged In";
-       $_SESSION['user_name'] = $row['user_name'];
-        $_SESSION['name'] = $row['name'];
-        $_SESSION['id'] = $row['id'];
+       $_SESSION['username'] = $row['username'];
+        $_SESSION['name'] = $row['firstName'];
+        $_SESSION['id'] = $row['employeeID'];
         $_SESSION['role'] = $row['role'];
         
-        if($row['role'] == "cashier")
+        if($row['role'] == "Cashier")
         {
-            header("Location: cashierhome.php");
+            header("Location: Cashier/cashierhome.php");
         }
-        elseif($row['role'] == "chef")
+        elseif($row['role'] == "Chef")
         {
-            header("Location: chefhome.php");
+            header("Location: Chef/chefhome.php");
         }
-        elseif($row['role'] == "owner")
+        elseif($row['role'] == "Owner")
         {
             header("Location: Owner/ownerhome.php");
         }
-        elseif($row['role'] == "invcontroller")
+        elseif($row['role'] == "Inventory")
         {
-            header("Location: ./StockController/invcontrollerhome.php");
+            header("Location: ./Controller/invcontrollerhome.php");
         }
         exit();
         
