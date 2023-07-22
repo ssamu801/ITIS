@@ -1,11 +1,10 @@
 <?php
 session_start();
 
-if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
+if(isset($_SESSION['id']) && isset($_SESSION['username']) && $_SESSION['role'] == "owner")
 {
     ?>
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Detailed Reports</title>
@@ -23,12 +22,11 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
 
 </body>
 </html>
-
 <?php
 }
 
 else{
-header("Location: index.php");
-exit();
+    header("Location: ../logout.php");
+    exit();
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] == "owner")
+if(isset($_SESSION['id']) && isset($_SESSION['username']) && $_SESSION['role'] == "Owner")
 {
     ?>
 
@@ -75,7 +75,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name']) && $_SESSION['role'] 
 }
 
 else{
-    header("Location: index.php");
+    header("Location: ../logout.php");
     exit();
 }
 ?>
