@@ -422,7 +422,7 @@
 							}
 							else{
 								$out = 0;
-								echo"<td>".$results['stock_out']."</td>";
+								echo"<td>".$out."</td>";
 							}
 		
 						}
